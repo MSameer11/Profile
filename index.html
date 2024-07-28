@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile Page</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Add this line -->
+    </head>
+    
+<body>
+    <div class="profile">
+        <div class="profile-header">
+            <img id="profile-pic" src="default-avatar.png" alt="Profile Picture">
+            <input type="file" id="profile-pic-input" style="display: none;">
+            <div class="profile-info">
+                <h1 id="user-name">Thomas</h1>
+                <p id="user-email">leaothomas45@dummy.com</p>
+                <button id="edit-profile"></button>
+                <button id="save-profile"></button>
+            </div>
+        </div>
+        <div class="discover">
+            <h2>Discover</h2>
+            <div class="platforms">
+                <button id="add-platform">Add Platform</button>
+                <div class="platform-list">
+                    <!-- Platform items will be appended here -->
+                </div>
+                <!-- Add this line to the saved-platform-details section in your HTML -->
+<div class="saved-platform-details">
+    <h3>Saved Platform Details</h3>
+    <button id="copy-details-btn">Copy</button> <!-- Add this line -->
+    <ul id="saved-details-list">
+        <!-- Saved platform details will be displayed here -->
+    </ul>
+</div>
+
+            </div>
+        </div>
+    </div>   
+
+    <!-- Modal Box -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Platform</h2>
+            <label for="platform-type">Platform Type:</label>
+            <select id="platform-type">
+                <option value="social">Social Media</option>
+                <option value="payment">Payment Method</option>
+            </select>
+            <label for="platform-list">Platform:</label>
+            <select id="platform-list">
+                <!-- Options will be populated here -->
+            </select>
+            <button id="add-platform-btn">Next</button>
+        </div>
+    </div>
+
+    <!-- Details Modal Box -->
+    <!-- Details Modal Box -->
+<div id="details-modal" class="modal">
+    <div class="modal-content">
+        <span class="details-close">&times;</span>
+        <h2>Add Platform Details</h2>
+        <button id="copy-details-btn">Copy</button> <!-- Add this line -->
+        <div id="platform-details-form">
+            <!-- Dynamic fields will be appended here -->
+        </div>
+        <button id="save-details-btn">Save</button>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
